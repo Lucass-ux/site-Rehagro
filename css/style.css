@@ -1,29 +1,7 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
 
 header {
-    background-color: #007bff;
-    color: white;
-    padding: 1rem;
-    text-align: center;
+    background-color: #3f5f59; /* verde parecido com o da imagem */
 }
-
-nav a {
-    color: white;
-    margin: 0 1rem;
-    text-decoration: none;
-}
-
-main {
-    padding: 2rem;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1rem;
+html {
+    scroll-behavior: smooth;
 }

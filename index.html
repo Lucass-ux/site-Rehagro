@@ -1,24 +1,162 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rehagro</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header>
-        <h1>Bem vindo à Rehagro</h1>
-        
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex items-center py-4 justify-start md:justify-between">
+          <!-- Botão Mobile -->
+          <div class="md:hidden">
+            <button class="btn btn-ghost" onclick="toggleMenu()">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-8 h-8 text-white"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            </button>
+          </div>
+          <!-- Logo -->
+          <div class="flex items-center gap-2">
+            <a href="index.html"
+              ><img
+                src="images/Logo-chapada-branca.png"
+                alt="Logo"
+                class="h-14 cursor-pointer"
+            /></a>
+          </div>
+
+          <!-- Menu Desktop -->
+          <nav class="hidden md:flex gap-6 font-bold text-white justify-bet">
+            <a href="#home" class="hover:text-green-600 transition">Home</a>
+            <a href="#rehagro" class="hover:text-green-600 transition"
+              >Rehagro</a
+            >
+          </nav>
+        </div>
+
+        <!-- Menu Mobile -->
+        <div
+          id="menuMobile"
+          class="hidden flex-col gap-4 pb-4 md:hidden text-white"
+        >
+          <a href="#home" class="block">Home</a>
+          <a href="#rehagro" class="block">Rehagro</a>
+        </div>
+      </div>
     </header>
     <main>
-        <section>
-            <h2>Materiais</h2>
-            <ul>
-                <li><a href="downloads/teste.pdf" download>teste</a></li>
-            </ul>
-        </section>
+      <!-- <section id="materiais">
+        <h2>Materiais</h2>
+        <ul>
+          <li><a href="downloads/teste.pdf" download>teste</a></li>
+        </ul>
+      </section> -->
+      
+      <section class="">
+        <div class="flex justify-center mb-0">
+            <img src="images/Logo chapada-01.png" alt="Logo" class="h-40">
+        </div>
+        <div class="max-w-6xl mx-auto text-center">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 bg-gray-100 p-5 rounded-md">
+            <!-- Card 1 -->
+            <div class="bg-white rounded-xl text-left">
+                <div class="w-14 h-14 rounded-full flex items-center justify-center m-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 bg-gray-200 rounded-3xl h-12 w-12 text-green-600">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 13.5V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 9.75V10.5" />
+                    </svg>
+                </div>
+
+                <h3 class="font-semibold text-lg m-2 ml-4">Lorem, ipsum.</h3>
+                <p class="text-gray-600 text-sm m-2 ml-4 ">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, magnam.
+                </p>
+                <div class="card-actions justify mt-3 mb-3">
+                  <a href="#" class="ml-4 bg-green-600 text-white px-4 py-2 rounded-md text-sm hover:bg-green-700 transition">Baixar</a>
+                </div>
+              
+            </div>
+
+            <div class="bg-white rounded-xl text-left">
+                <div class="w-14 h-14 rounded-full flex items-center justify-center m-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 bg-gray-200 rounded-3xl h-12 w-12 text-green-600">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 13.5V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 9.75V10.5" />
+                    </svg>
+                </div>
+
+                <h3 class="font-semibold text-lg m-2 ml-4">Lorem, ipsum.</h3>
+                <p class="text-gray-600 text-sm m-2 ml-4 ">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, magnam.
+                </p>
+                <div class="card-actions justify mt-3 mb-3">
+                  <a href="#" class="ml-4 bg-green-600 text-white px-4 py-2 rounded-md text-sm hover:bg-green-700 transition">Baixar</a>
+                </div>
+              
+            </div>
+
+            <div class="bg-white rounded-xl text-left">
+                <div class="w-14 h-14 rounded-full flex items-center justify-center m-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 bg-gray-200 rounded-3xl h-12 w-12 text-green-600">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 13.5V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 9.75V10.5" />
+                    </svg>
+                </div>
+
+                <h3 class="font-semibold text-lg m-2 ml-4">Lorem, ipsum.</h3>
+                <p class="text-gray-600 text-sm m-2 ml-4 ">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, magnam.
+                </p>
+                <div class="card-actions justify mt-3 mb-3">
+                  <a href="#" class="ml-4 bg-green-600 text-white px-4 py-2 rounded-md text-sm hover:bg-green-700 transition">Baixar</a>
+                </div>
+              
+            </div>
+
+            <div class="bg-white rounded-xl text-left">
+                <div class="w-14 h-14 rounded-full flex items-center justify-center m-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 bg-gray-200 rounded-3xl h-12 w-12 text-green-600">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 13.5V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 9.75V10.5" />
+                    </svg>
+                </div>
+
+                <h3 class="font-semibold text-lg m-2 ml-4">Lorem, ipsum.</h3>
+                <p class="text-gray-600 text-sm m-2 ml-4 ">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, magnam.
+                </p>
+                <div class="card-actions justify mt-3 mb-3">
+                  <a href="#" class="ml-4 bg-green-600 text-white px-4 py-2 rounded-md text-sm hover:bg-green-700 transition">Baixar</a>
+                </div>
+              
+            </div>
+            
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    
-</body>
+
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById("menuMobile");
+        menu.classList.toggle("hidden");
+      }
+    </script>
+  </body>
 </html>
